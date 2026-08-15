@@ -2,11 +2,16 @@
 
 ## Current build
 
-- Status: complete local implementation; validation and publishing in progress
+- Status: complete and validated; ready for the owner to publish with GitHub Pages
 - Visual direction: deep charcoal canvas, warm white contrast, cyan/magenta/yellow accents
-- Framework: static-first Vinext/React, Cloudflare-compatible output, no PHP
-- Primary CTA: external Notion quote form
+- Brand logo: owner-approved transparent PNG at `public/mist-logo.png`, used in the shared header, footer, and Organization structured data
+- Framework: static-first Vinext/React export, GitHub Pages-compatible, no PHP
+- Primary CTA: confirmed external Notion quote form at `https://inky-hair-385.notion.site/37776252de67800da15cf4138026e7b0?pvs=105`
 - Media source: `C:\Users\andy\Downloads\MistWebsite\gallery`
+- Media policy: all 15 optimized gallery images and all 7 supplied process videos remain in `public/work/` and ship with the repository
+- Hosting decision: the owner will configure and publish with GitHub Pages; Codex should not deploy this project to another platform unless explicitly requested
+- Rendering: every route is build-time server-rendered to complete static HTML; the production site does not require JavaScript for content or navigation
+- Hero treatment: no eyebrow text above page-level H1 headings; section labels remain in content sections
 
 ## Routes
 
@@ -15,8 +20,8 @@
 - `/our-work` — implemented with complete image and video gallery
 - `/about` — implemented
 - `/service-area` — implemented
-- `/contact` — implemented with an honest pending-form state; awaiting Notion URL and business contact details
-- `/privacy` — implemented; requires final privacy contact before the quote form accepts submissions
+- `/contact` — implemented with active Notion form handoff; awaiting public business contact details
+- `/privacy` — implemented with an accurate Notion disclosure and interim privacy inquiry route through the form; dedicated privacy email still needed
 
 ## Confirmed facts
 
@@ -30,7 +35,6 @@
 
 ## Needed owner inputs
 
-- Notion form URL
 - Public phone and email
 - Address or service-area-only wording
 - Business hours

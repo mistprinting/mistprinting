@@ -25,10 +25,11 @@ Convert local and national visitors into quote requests while proving print qual
 
 ## Hero contract
 
-- Eyebrow: `Boise-made · Nationwide delivery`
+- Do not place eyebrow text above the homepage H1.
 - Headline: `Custom printing built to show up.`
 - Supporting message must mention DTF apparel, stickers, decals, Treasure Valley service, and nationwide shipping.
 - Primary CTA: `Start your quote`
+- The primary CTA opens the confirmed external Notion quote form in a new tab.
 - Secondary CTA: `See recent work`
 - Use supplied work photography as the dominant visual.
 

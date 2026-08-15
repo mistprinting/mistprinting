@@ -33,10 +33,13 @@ Shared header, footer, metadata, JSON-LD, sitemap, robots, and visual tokens bel
 - Present Mist Printing as a Boise-area DTF print shop serving the Treasure Valley and shipping nationally.
 - Use deep charcoal as the primary canvas, warm white for contrast, and cyan, magenta, and yellow as deliberate accents.
 - Keep navigation and ordering simple. Make the primary CTA `Get a quote` or `Start your quote`.
+- When `siteConfig.notionQuoteUrl` is configured, primary quote CTAs open that exact external Notion form in a new tab. Keep `/contact` available as the quote-preparation and guidance page.
 - Never claim embroidery is available. Mist currently specializes in DTF apparel, stickers, and decals.
 - Never invent prices, turnaround promises, minimums, testimonials, addresses, hours, or customer identities.
 - Use the supplied logo and real project media. Do not replace them with generic stock printing imagery.
 - Keep pages static-first. Lazy-load below-the-fold images and all video; use responsive media and minimal client JavaScript.
+- Do not use eyebrow text above page-level H1 headings. Section labels remain allowed where they aid scanning.
+- The production export must contain complete visible content, navigation, metadata, and structured data in HTML. Search engines and visitors must not require JavaScript to read or navigate the site.
 - Use people-first local language. Do not create thin, duplicated city landing pages.
 - Keep visible copy and structured data consistent.
 

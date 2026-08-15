@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { PageHero } from "../components/PageHero";
 import { QuoteCta } from "../components/QuoteCta";
+import { QuoteLink } from "../components/QuoteLink";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
+import { assetPath, canonicalUrl } from "../site-config";
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: "DTF Apparel, Stickers & Decals",
   description: "Explore custom DTF apparel printing, stickers, decals, and coordinated bulk orders from Mist Printing in the Boise area.",
-  alternates: { canonical: "/services" },
+  alternates: { canonical: canonicalUrl("/services") },
 };
 
 const services = [
@@ -20,11 +23,11 @@ const services = [
 
 export default function ServicesPage() {
   return <><SiteHeader /><main>
-    <PageHero eyebrow="Printing services" title="The right print for" accent="the way you'll use it." description="Apparel, stickers, decals, and coordinated volume—made with the color and detail your idea deserves." />
+    <PageHero title="The right print for" accent="the way you'll use it." description="Apparel, stickers, decals, and coordinated volume—made with the color and detail your idea deserves." />
     <section className="service-detail-list">
-      {services.map((service, index) => <article className="service-detail" id={service.id} key={service.id}>
-        <div className="service-detail-image"><Image src={service.image} alt={service.alt} fill sizes="(max-width: 800px) 100vw, 48vw" /></div>
-        <div className="service-detail-copy"><span className="big-number">{service.number}</span><p className="section-label">{service.title}</p><h2>{service.kicker}</h2><p>{service.text}</p><ul>{service.uses.map((use) => <li key={use}>{use}</li>)}</ul><Link className="text-link" href="/contact">Ask about this service ↗</Link></div>
+      {services.map((service) => <article className="service-detail" id={service.id} key={service.id}>
+        <div className="service-detail-image"><Image src={assetPath(service.image)} alt={service.alt} fill sizes="(max-width: 800px) 100vw, 48vw" /></div>
+        <div className="service-detail-copy"><span className="big-number">{service.number}</span><p className="section-label">{service.title}</p><h2>{service.kicker}</h2><p>{service.text}</p><ul>{service.uses.map((use) => <li key={use}>{use}</li>)}</ul><QuoteLink className="text-link">Ask about this service ↗</QuoteLink></div>
       </article>)}
     </section>
     <section className="not-offered"><p className="section-label">Clear expectations</p><h2>Looking for embroidery?</h2><p>Not yet. Mist Printing currently specializes in DTF apparel printing, stickers, and decals—so we can stay focused on doing those exceptionally well.</p></section>

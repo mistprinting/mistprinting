@@ -1,3 +1,7 @@
+import { assetPath } from "./site-config";
+
+const media = (path: string) => assetPath(path);
+
 export const galleryImages = [
   { src: "/work/gallery/volleyball-event-shirts.webp", alt: "Custom volleyball event shirts with a colorful full-front print", caption: "Sporting event apparel", kind: "apparel" },
   { src: "/work/gallery/alpha-organization-shirt.webp", alt: "Custom organization shirt with a clean one-color chest print", caption: "Organization apparel", kind: "apparel" },
@@ -14,7 +18,7 @@ export const galleryImages = [
   { src: "/work/gallery/floral-heart-shirt.webp", alt: "Custom shirt with a colorful floral heart graphic", caption: "Full-color apparel", kind: "apparel" },
   { src: "/work/gallery/coffee-logo-shirt.webp", alt: "Custom shirt with a circular coffee logo", caption: "Branded apparel", kind: "apparel" },
   { src: "/work/gallery/teaching-ministry-shirts.webp", alt: "Three teaching ministry shirts in coordinated colors", caption: "Church and ministry apparel", kind: "apparel" },
-];
+].map((item) => ({ ...item, src: media(item.src) }));
 
 export const processVideos = [
   { src: "/work/videos/print-process-01.mp4", poster: "/work/gallery/usa-floral-print-detail.webp", label: "Print process close-up" },
@@ -24,5 +28,9 @@ export const processVideos = [
   { src: "/work/videos/print-process-05.mp4", poster: "/work/gallery/coffee-club-shirts.webp", label: "Group order production" },
   { src: "/work/videos/print-process-06.mp4", poster: "/work/gallery/floral-heart-shirt.webp", label: "Full-color print process" },
   { src: "/work/videos/sticker-printing-process.mp4", poster: "/work/gallery/holographic-ministry-stickers.webp", label: "Sticker printing process" },
-];
+].map((video) => ({
+  ...video,
+  src: media(video.src),
+  poster: media(video.poster),
+}));
 

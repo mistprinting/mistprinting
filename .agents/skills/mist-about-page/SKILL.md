@@ -15,4 +15,4 @@ Build trust in Mist Printing as an approachable local production partner capable
 - Emphasize clear communication, bold full-color work, reliable coordination, and pride in the result.
 - Balance local service with nationwide fulfillment.
 - Use real behind-the-scenes media when available.
-- End with links to `/our-work` and `/contact`.
+- End with a link to `/our-work` and a quote CTA that opens the confirmed external Notion form.

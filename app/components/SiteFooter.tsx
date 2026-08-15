@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "../site-config";
+import { QuoteLink } from "./QuoteLink";
 
 export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-lead">
-        <Image src="/mist-logo.svg" alt="Mist Printing" width={220} height={161} />
+        <Image src={assetPath("/mist-logo.png")} alt="Mist Printing" width={1091} height={684} />
         <p>Custom apparel, stickers, and decals from the Treasure Valley to anywhere in the country.</p>
       </div>
       <div>
@@ -17,7 +19,8 @@ export function SiteFooter() {
       </div>
       <div>
         <p className="footer-heading">Start an order</p>
-        <Link href="/contact">Get a quote</Link>
+        <QuoteLink>Open quote form ↗</QuoteLink>
+        <Link href="/contact">Quote details</Link>
         <Link href="/privacy">Privacy policy</Link>
       </div>
       <div className="footer-bottom">
@@ -27,4 +30,3 @@ export function SiteFooter() {
     </footer>
   );
 }
-

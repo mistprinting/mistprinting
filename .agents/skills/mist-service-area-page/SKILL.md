@@ -19,4 +19,4 @@ Establish relevant local coverage while making national ordering and shipping cl
 
 ## Required sections
 
-Local overview, city coverage, nationwide shipping, suitable order types, ordering process, and quote CTA.
+Local overview, city coverage, nationwide shipping, suitable order types, ordering process, and a quote CTA that opens the confirmed external Notion form.

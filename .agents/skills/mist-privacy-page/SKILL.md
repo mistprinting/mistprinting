@@ -12,7 +12,8 @@ Provide a plain-language privacy disclosure that matches the site's actual behav
 ## Policy contract
 
 - Describe data intentionally submitted through the external Notion quote form.
-- State that Notion processes form data under its own policies when configured.
+- State that the configured quote form is hosted by Notion and that Notion processes submitted data under its own privacy practices.
+- Until a dedicated privacy email is confirmed, direct privacy questions through the owner-confirmed Notion form and ask visitors to identify the message as a privacy inquiry.
 - Do not claim analytics, advertising cookies, payment processing, retention periods, or deletion workflows that are not implemented.
 - Explain ordinary server logs and embedded media requests if present.
 - Provide an owner-confirmed privacy contact before launch.

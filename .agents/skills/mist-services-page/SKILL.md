@@ -20,4 +20,4 @@ Help customers determine whether Mist can produce their order and move qualified
 
 ## Conversion contract
 
-Use a quote CTA above the fold, after the service comparison, and at the end. Link proof to `/our-work`.
+Use quote CTAs that open the confirmed external Notion form, including after the service comparison and at the end. Link proof to `/our-work`.

@@ -17,4 +17,4 @@ Turn real finished work into visual proof of detail, color, variety, and product
 - Load images responsively and lazily below the first row.
 - Give every video a poster, `preload="none"`, visible controls, and no autoplay audio.
 - Keep the homepage selection curated; the complete collection belongs here.
-- Include a quote CTA after the gallery.
+- Include a quote CTA after the gallery that opens the confirmed external Notion form.

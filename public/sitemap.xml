@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://mistprinting.github.io/mistprinting</loc><changefreq>yearly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://mistprinting.github.io/mistprinting/services</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mistprinting.github.io/mistprinting/our-work</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mistprinting.github.io/mistprinting/about</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mistprinting.github.io/mistprinting/service-area</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mistprinting.github.io/mistprinting/contact</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mistprinting.github.io/mistprinting/privacy</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+</urlset>

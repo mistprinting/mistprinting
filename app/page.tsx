@@ -2,13 +2,17 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { QuoteCta } from "./components/QuoteCta";
+import { QuoteLink } from "./components/QuoteLink";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
+import { absoluteAssetUrl, assetPath, canonicalUrl } from "./site-config";
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: "Custom DTF Printing in Boise",
   description: "Custom DTF apparel, stickers, and decals for Boise-area businesses, sports, churches, reunions, and events, with nationwide shipping.",
-  alternates: { canonical: "/" },
+  alternates: { canonical: canonicalUrl() },
 };
 
 const services = [
@@ -33,18 +37,19 @@ export default function Home() {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "/#organization",
+        "@id": `${canonicalUrl()}#organization`,
         name: "Mist Printing",
-        logo: "/mist-logo.svg",
+        logo: absoluteAssetUrl("/mist-logo.png"),
         description: "Custom DTF apparel, sticker, and decal printing serving the Treasure Valley and customers nationwide.",
         areaServed: ["Boise, Idaho", "Meridian, Idaho", "Nampa, Idaho", "Caldwell, Idaho", "Ontario, Oregon", "United States"],
         makesOffer: ["DTF apparel printing", "Custom stickers", "Custom decals", "Bulk event printing"],
       },
       {
         "@type": "WebSite",
-        "@id": "/#website",
+        "@id": `${canonicalUrl()}#website`,
+        url: canonicalUrl(),
         name: "Mist Printing",
-        publisher: { "@id": "/#organization" },
+        publisher: { "@id": `${canonicalUrl()}#organization` },
       },
       {
         "@type": "FAQPage",
@@ -63,11 +68,10 @@ export default function Home() {
       <main>
         <section className="hero">
           <div className="hero-copy">
-            <p className="eyebrow"><span />Boise-made · Nationwide delivery</p>
             <h1>Custom printing<br />built to <em>show up.</em></h1>
             <p className="lede">Bold DTF apparel, stickers, and decals for businesses, teams, churches, reunions, and events. Made locally for the Treasure Valley. Shipped anywhere.</p>
             <div className="hero-actions">
-              <Link className="button" href="/contact">Start your quote <span aria-hidden="true">↗</span></Link>
+              <QuoteLink className="button">Start your quote <span aria-hidden="true">↗</span></QuoteLink>
               <Link className="text-link" href="/our-work">See recent work <span aria-hidden="true">↓</span></Link>
             </div>
             <ul className="service-pills" aria-label="Core services">
@@ -77,10 +81,10 @@ export default function Home() {
           <div className="hero-art" aria-label="Examples of custom printing by Mist Printing">
             <div className="color-stripe" />
             <figure className="hero-photo hero-photo-main">
-              <Image src="/work/gallery/teaching-ministry-shirts.webp" alt="Three custom teaching ministry shirts" fill sizes="(max-width: 800px) 94vw, 48vw" priority />
+              <Image src={assetPath("/work/gallery/teaching-ministry-shirts.webp")} alt="Three custom teaching ministry shirts" fill sizes="(max-width: 800px) 94vw, 48vw" priority />
             </figure>
             <figure className="hero-photo hero-photo-small">
-              <Image src="/work/gallery/volleyball-event-shirts.webp" alt="Colorful custom volleyball event shirt" fill sizes="230px" />
+              <Image src={assetPath("/work/gallery/volleyball-event-shirts.webp")} alt="Colorful custom volleyball event shirt" fill sizes="230px" />
             </figure>
             <div className="quality-stamp"><strong>Full color</strong><span>Built to last</span></div>
           </div>
@@ -107,9 +111,9 @@ export default function Home() {
         <section className="work-showcase">
           <div className="work-title"><p className="section-label">Made by Mist</p><h2>Details you can see.<br /><span>Quality you can feel.</span></h2></div>
           <div className="work-mosaic">
-            <figure className="mosaic-tall"><Image src="/work/gallery/usa-floral-shirt.webp" alt="Detailed floral USA apparel print" fill sizes="(max-width: 800px) 100vw, 40vw" /></figure>
-            <figure><Image src="/work/gallery/holographic-ministry-stickers.webp" alt="Rows of holographic custom stickers" fill sizes="(max-width: 800px) 100vw, 30vw" /></figure>
-            <figure><Image src="/work/gallery/business-vehicle-decal.webp" alt="Custom business vehicle decal" fill sizes="(max-width: 800px) 100vw, 30vw" /></figure>
+            <figure className="mosaic-tall"><Image src={assetPath("/work/gallery/usa-floral-shirt.webp")} alt="Detailed floral USA apparel print" fill sizes="(max-width: 800px) 100vw, 40vw" /></figure>
+            <figure><Image src={assetPath("/work/gallery/holographic-ministry-stickers.webp")} alt="Rows of holographic custom stickers" fill sizes="(max-width: 800px) 100vw, 30vw" /></figure>
+            <figure><Image src={assetPath("/work/gallery/business-vehicle-decal.webp")} alt="Custom business vehicle decal" fill sizes="(max-width: 800px) 100vw, 30vw" /></figure>
           </div>
           <div className="work-footer"><p>Real projects, printed locally—from one coordinated idea to large runs ready for an entire group.</p><Link className="text-link" href="/our-work">Explore all work <span aria-hidden="true">↗</span></Link></div>
         </section>
@@ -123,8 +127,8 @@ export default function Home() {
         </section>
 
         <section className="bulk-section">
-          <div className="bulk-photo"><Image src="/work/gallery/coffee-club-shirts.webp" alt="Coordinated custom shirts for a group order" fill sizes="(max-width: 800px) 100vw, 50vw" /></div>
-          <div className="bulk-copy"><p className="section-label">Built for volume</p><h2>Big order?<br /><span>Bring it on.</span></h2><p>Businesses, teams, ministries, reunions, and event organizers need more than a good print—they need a clear process. We help keep artwork, quantities, and production moving together.</p><Link className="button" href="/contact">Talk about your order <span>↗</span></Link></div>
+          <div className="bulk-photo"><Image src={assetPath("/work/gallery/coffee-club-shirts.webp")} alt="Coordinated custom shirts for a group order" fill sizes="(max-width: 800px) 100vw, 50vw" /></div>
+          <div className="bulk-copy"><p className="section-label">Built for volume</p><h2>Big order?<br /><span>Bring it on.</span></h2><p>Businesses, teams, ministries, reunions, and event organizers need more than a good print—they need a clear process. We help keep artwork, quantities, and production moving together.</p><QuoteLink className="button">Talk about your order <span>↗</span></QuoteLink></div>
         </section>
 
         <section className="section process-section">
