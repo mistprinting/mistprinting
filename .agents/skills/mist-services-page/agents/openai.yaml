@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mist Services Page"
+  short_description: "Maintain printing services and capability copy"
+  default_prompt: "Use $mist-services-page to update the Mist Printing services page."

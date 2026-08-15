@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mist Site Orchestrator"
+  short_description: "Coordinate page contracts and site-wide decisions"
+  default_prompt: "Use $mist-site-orchestrator to coordinate a consistent Mist Printing site change."

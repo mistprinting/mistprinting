@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mist Work Page"
+  short_description: "Maintain the optimized project gallery"
+  default_prompt: "Use $mist-work-page to update the Mist Printing work gallery."

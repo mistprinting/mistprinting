@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mist Home Page"
+  short_description: "Maintain the conversion-focused Mist homepage"
+  default_prompt: "Use $mist-home-page to update the Mist Printing homepage."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mist Service Area Page"
+  short_description: "Maintain local and national service-area SEO"
+  default_prompt: "Use $mist-service-area-page to update Mist Printing service-area content."

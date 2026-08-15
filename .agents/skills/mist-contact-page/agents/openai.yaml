@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mist Contact Page"
+  short_description: "Maintain the quote and contact experience"
+  default_prompt: "Use $mist-contact-page to update the Mist Printing contact page."

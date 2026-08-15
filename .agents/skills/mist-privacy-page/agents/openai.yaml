@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mist Privacy Page"
+  short_description: "Maintain the website privacy disclosures"
+  default_prompt: "Use $mist-privacy-page to update the Mist Printing privacy page."

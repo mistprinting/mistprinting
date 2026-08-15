@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mist About Page"
+  short_description: "Maintain the Mist Printing company story"
+  default_prompt: "Use $mist-about-page to update the Mist Printing about page."
