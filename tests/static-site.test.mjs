@@ -58,3 +58,17 @@ test("uses the confirmed Notion form for primary quote calls to action", async (
   assert.match(contactHtml, /Open quote form/);
   assert.doesNotMatch(contactHtml, /Quote form coming soon/);
 });
+
+test("publishes only the generated static site through GitHub Pages", async () => {
+  const workflow = await readFile(
+    new URL("../.github/workflows/deploy-pages.yml", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(workflow, /run: npm run build/);
+  assert.match(workflow, /run: node --test tests\/static-site\.test\.mjs/);
+  assert.match(workflow, /uses: actions\/upload-pages-artifact@v5/);
+  assert.match(workflow, /path: dist\/client/);
+  assert.match(workflow, /include-hidden-files: true/);
+  assert.match(workflow, /uses: actions\/deploy-pages@v5/);
+});

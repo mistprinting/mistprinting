@@ -2,7 +2,7 @@
 
 ## Current build
 
-- Status: complete and validated; ready for the owner to publish with GitHub Pages
+- Status: complete and validated; GitHub Pages deployment workflow included
 - Visual direction: deep charcoal canvas, warm white contrast, cyan/magenta/yellow accents
 - Brand logo: owner-approved transparent PNG at `public/mist-logo.png`, used in the shared header, footer, and Organization structured data
 - Framework: static-first Vinext/React export, GitHub Pages-compatible, no PHP
@@ -10,6 +10,8 @@
 - Media source: `C:\Users\andy\Downloads\MistWebsite\gallery`
 - Media policy: all 15 optimized gallery images and all 7 supplied process videos remain in `public/work/` and ship with the repository
 - Hosting decision: the owner will configure and publish with GitHub Pages; Codex should not deploy this project to another platform unless explicitly requested
+- Deployment: `.github/workflows/deploy-pages.yml` builds and validates the site on pushes to `main`, then publishes only `dist/client` through GitHub Actions
+- GitHub Pages setting: the publishing source must be `GitHub Actions`, not the repository root or `/docs`
 - Rendering: every route is build-time server-rendered to complete static HTML; the production site does not require JavaScript for content or navigation
 - Hero treatment: no eyebrow text above page-level H1 headings; section labels remain in content sections
 
