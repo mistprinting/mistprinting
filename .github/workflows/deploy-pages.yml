@@ -17,6 +17,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      SITE_BASE_PATH: ""
+      SITE_URL: https://mistprinting.com
 
     steps:
       - name: Check out repository

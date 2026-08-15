@@ -1,4 +1,4 @@
-const rawBasePath = (process.env.SITE_BASE_PATH ?? "/mistprinting").trim();
+const rawBasePath = (process.env.SITE_BASE_PATH ?? "").trim();
 
 export const basePath = rawBasePath
   ? `/${rawBasePath.replace(/^\/+|\/+$/g, "")}`
@@ -8,7 +8,7 @@ export const siteConfig = {
   name: "Mist Printing",
   siteUrl:
     process.env.SITE_URL?.replace(/\/$/, "") ??
-    "https://mistprinting.github.io/mistprinting",
+    "https://mistprinting.com",
   description:
     "Custom DTF apparel, stickers, and decals for businesses, teams, churches, reunions, and events. Local Treasure Valley service with nationwide shipping.",
   notionQuoteUrl:

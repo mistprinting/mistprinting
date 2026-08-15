@@ -6,8 +6,8 @@ import { fileURLToPath } from "node:url";
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outputRoot = resolve(projectRoot, "dist", "client");
 const port = Number(process.env.STATIC_EXPORT_PORT ?? 4317);
-const basePath = normalizeBasePath(process.env.SITE_BASE_PATH ?? "/mistprinting");
-const siteUrl = (process.env.SITE_URL ?? "https://mistprinting.github.io/mistprinting").replace(/\/$/, "");
+const basePath = normalizeBasePath(process.env.SITE_BASE_PATH ?? "");
+const siteUrl = (process.env.SITE_URL ?? "https://mistprinting.com").replace(/\/$/, "");
 const routes = ["/", "/services", "/our-work", "/about", "/service-area", "/contact", "/privacy"];
 const vinextCli = resolve(projectRoot, "node_modules", "vinext", "dist", "cli.js");
 const serverOutput = [];
@@ -19,8 +19,7 @@ function normalizeBasePath(value) {
 }
 
 function exportUrl(route) {
-  const suffix = route === "/" ? "/" : `${route}/`;
-  return `${exportOrigin}${basePath}${suffix}`;
+  return `${exportOrigin}${basePath}${route}`;
 }
 
 function outputFile(route) {

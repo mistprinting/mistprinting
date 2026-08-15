@@ -14,6 +14,8 @@ test("exports every public route as static HTML", async () => {
     assert.doesNotMatch(html, /class="eyebrow"/i);
     assert.doesNotMatch(html, /<script(?![^>]*application\/ld\+json)/i);
     assert.doesNotMatch(html, /@vite|_next\/static/i);
+    assert.doesNotMatch(html, /["']\/mistprinting(?:\/|["'])/i);
+    assert.doesNotMatch(html, /mistprinting\.github\.io/i);
   }
 });
 
@@ -47,6 +49,16 @@ test("includes local SEO, nationwide shipping, and structured data", async () =>
   assert.match(homeHtml, /Ontario/i);
   assert.match(homeHtml, /application\/ld\+json/i);
   assert.match(homeHtml, /FAQPage/);
+  assert.match(homeHtml, /<link rel="stylesheet" href="\/styles\.css"\/>/i);
+  assert.match(homeHtml, /src="\/mist-logo\.png"/i);
+  assert.match(homeHtml, /href="\/services"/i);
+  assert.match(homeHtml, /<link rel="canonical" href="https:\/\/mistprinting\.com"/i);
+
+  const robots = await readFile(new URL("robots.txt", outputRoot), "utf8");
+  const sitemap = await readFile(new URL("sitemap.xml", outputRoot), "utf8");
+  assert.match(robots, /Sitemap: https:\/\/mistprinting\.com\/sitemap\.xml/);
+  assert.match(sitemap, /<loc>https:\/\/mistprinting\.com<\/loc>/);
+  assert.doesNotMatch(sitemap, /mistprinting\.github\.io/i);
 });
 
 test("uses the confirmed Notion form for primary quote calls to action", async () => {
@@ -71,4 +83,6 @@ test("publishes only the generated static site through GitHub Pages", async () =
   assert.match(workflow, /path: dist\/client/);
   assert.match(workflow, /include-hidden-files: true/);
   assert.match(workflow, /uses: actions\/deploy-pages@v5/);
+  assert.match(workflow, /SITE_BASE_PATH: ""/);
+  assert.match(workflow, /SITE_URL: https:\/\/mistprinting\.com/);
 });

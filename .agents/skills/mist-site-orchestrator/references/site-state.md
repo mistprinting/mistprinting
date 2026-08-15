@@ -12,6 +12,8 @@
 - Hosting decision: the owner will configure and publish with GitHub Pages; Codex should not deploy this project to another platform unless explicitly requested
 - Deployment: `.github/workflows/deploy-pages.yml` builds and validates the site on pushes to `main`, then publishes only `dist/client` through GitHub Actions
 - GitHub Pages setting: the publishing source must be `GitHub Actions`, not the repository root or `/docs`
+- Custom domain: `https://mistprinting.com`
+- Public path: the custom-domain build is served from `/`; `SITE_BASE_PATH` must remain empty so styles, media, and internal links resolve at the domain root
 - Rendering: every route is build-time server-rendered to complete static HTML; the production site does not require JavaScript for content or navigation
 - Hero treatment: no eyebrow text above page-level H1 headings; section labels remain in content sections
 

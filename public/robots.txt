@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mistprinting.github.io/mistprinting/sitemap.xml
+Sitemap: https://mistprinting.com/sitemap.xml

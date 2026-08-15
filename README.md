@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000/mistprinting/`.
+Open `http://localhost:3000/`.
 
 ## Production build
 
@@ -24,7 +24,7 @@ The production command validates the Vinext application, renders every route to 
 
 ## GitHub Pages deployment
 
-For this repository's default GitHub Pages URL, the correct path and canonical URL are already the build defaults:
+The production build targets the custom domain at `https://mistprinting.com` and serves the site from `/`:
 
 ```bash
 npm run build
@@ -34,10 +34,10 @@ The workflow at `.github/workflows/deploy-pages.yml` builds the project on every
 
 In the repository's **Settings > Pages** screen, set **Source** to **GitHub Actions**. Do not publish from the repository root because GitHub Pages will render this README instead of the generated website.
 
-If a custom domain is connected later, leave `SITE_BASE_PATH` empty and set `SITE_URL` to the final `https://` origin before building. Update `public/robots.txt`, `public/sitemap.xml`, and `.agents/skills/mist-site-orchestrator/references/site-state.md` when the canonical domain changes.
+Keep `SITE_BASE_PATH` empty for the custom domain. `SITE_URL` is set to `https://mistprinting.com` so canonical URLs, Open Graph metadata, robots, and the sitemap all use the public domain.
 
 ## Content configuration
 
-Business-wide facts and the future Notion quote URL live in `app/site-config.ts`. Page requirements live under `.agents/skills`; begin with `.agents/skills/mist-site-orchestrator/SKILL.md` and its `references/site-state.md` file before changing the site.
+Business-wide facts and the active Notion quote URL live in `app/site-config.ts`. Page requirements live under `.agents/skills`; begin with `.agents/skills/mist-site-orchestrator/SKILL.md` and its `references/site-state.md` file before changing the site.
 
-The contact page intentionally says `Quote form coming soon` until a real Notion URL is supplied. Do not invent contact details, prices, turnaround times, minimum quantities, or embroidery availability.
+Do not invent contact details, prices, turnaround times, minimum quantities, or embroidery availability.
