@@ -2,7 +2,7 @@
 
 ## Current build
 
-- Status: implementation in progress
+- Status: complete local implementation; validation and publishing in progress
 - Visual direction: deep charcoal canvas, warm white contrast, cyan/magenta/yellow accents
 - Framework: static-first Vinext/React, Cloudflare-compatible output, no PHP
 - Primary CTA: external Notion quote form
@@ -10,13 +10,13 @@
 
 ## Routes
 
-- `/` — in progress
-- `/services` — planned
-- `/our-work` — planned
-- `/about` — planned
-- `/service-area` — planned
-- `/contact` — planned; awaiting Notion URL and business contact details
-- `/privacy` — planned; requires final privacy contact before launch
+- `/` — implemented
+- `/services` — implemented
+- `/our-work` — implemented with complete image and video gallery
+- `/about` — implemented
+- `/service-area` — implemented
+- `/contact` — implemented with an honest pending-form state; awaiting Notion URL and business contact details
+- `/privacy` — implemented; requires final privacy contact before the quote form accepts submissions
 
 ## Confirmed facts
 

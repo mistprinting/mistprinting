@@ -6,7 +6,7 @@ import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
 
 export const metadata: Metadata = {
-  title: "Custom DTF Printing in Boise | Mist Printing",
+  title: "Custom DTF Printing in Boise",
   description: "Custom DTF apparel, stickers, and decals for Boise-area businesses, sports, churches, reunions, and events, with nationwide shipping.",
   alternates: { canonical: "/" },
 };
