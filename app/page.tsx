@@ -96,7 +96,7 @@ export default function Home() {
 
         <section className="section light-section" id="services">
           <div className="section-heading split-heading">
-            <div><p className="section-label">What we make</p><h2>Your idea.<br /><span>Printed with impact.</span></h2></div>
+            <div><h2>Your idea.<br /><span>Printed with impact.</span></h2></div>
             <p>Clear options, bold color, and a straightforward path from artwork to finished order.</p>
           </div>
           <div className="service-grid">
@@ -109,7 +109,7 @@ export default function Home() {
         </section>
 
         <section className="work-showcase">
-          <div className="work-title"><p className="section-label">Made by Mist</p><h2>Details you can see.<br /><span>Quality you can feel.</span></h2></div>
+          <div className="work-title"><h2>Details you can see.<br /><span>Quality you can feel.</span></h2></div>
           <div className="work-mosaic">
             <figure className="mosaic-tall"><Image src={assetPath("/work/gallery/usa-floral-shirt.webp")} alt="Detailed floral USA apparel print" fill sizes="(max-width: 800px) 100vw, 40vw" /></figure>
             <figure><Image src={assetPath("/work/gallery/holographic-ministry-stickers.webp")} alt="Rows of holographic custom stickers" fill sizes="(max-width: 800px) 100vw, 30vw" /></figure>
@@ -119,7 +119,6 @@ export default function Home() {
         </section>
 
         <section className="section audience-section">
-          <p className="section-label">Who we print for</p>
           <div className="audience-layout">
             <h2>Outfit the whole crew.<br /><span>Without the chaos.</span></h2>
             <div className="audience-list">{audiences.map((audience, index) => <div key={audience}><span>{String(index + 1).padStart(2, "0")}</span>{audience}</div>)}</div>
@@ -128,11 +127,11 @@ export default function Home() {
 
         <section className="bulk-section">
           <div className="bulk-photo"><Image src={assetPath("/work/gallery/coffee-club-shirts.webp")} alt="Coordinated custom shirts for a group order" fill sizes="(max-width: 800px) 100vw, 50vw" /></div>
-          <div className="bulk-copy"><p className="section-label">Built for volume</p><h2>Big order?<br /><span>Bring it on.</span></h2><p>Businesses, teams, ministries, reunions, and event organizers need more than a good print—they need a clear process. We help keep artwork, quantities, and production moving together.</p><QuoteLink className="button">Talk about your order <span>↗</span></QuoteLink></div>
+          <div className="bulk-copy"><h2>Big order?<br /><span>Bring it on.</span></h2><p>Businesses, teams, ministries, reunions, and event organizers need more than a good print—they need a clear process. We help keep artwork, quantities, and production moving together.</p><QuoteLink className="button">Talk about your order <span>↗</span></QuoteLink></div>
         </section>
 
         <section className="section process-section">
-          <div className="section-heading"><p className="section-label">How it works</p><h2>From idea to finished.</h2></div>
+          <div className="section-heading"><h2>From idea to finished.</h2></div>
           <ol className="process-grid">
             <li><span>01</span><h3>Share the idea</h3><p>Tell us what you need, your quantity, timing, and where it is going.</p></li>
             <li><span>02</span><h3>Confirm details</h3><p>We align on the product, artwork, and the requirements of your order.</p></li>
@@ -142,12 +141,12 @@ export default function Home() {
         </section>
 
         <section className="service-area-teaser">
-          <div><p className="section-label">Near or far</p><h2>Treasure Valley roots.<br /><span>Nationwide reach.</span></h2></div>
+          <div><h2>Treasure Valley roots.<br /><span>Nationwide reach.</span></h2></div>
           <div><p>Serving Boise, Meridian, Nampa, Caldwell, and Ontario locally—with finished orders shipping across the United States.</p><Link className="text-link" href="/service-area">See our service area <span>↗</span></Link></div>
         </section>
 
         <section className="section faq-section">
-          <div className="faq-intro"><p className="section-label">Good to know</p><h2>Questions,<br />answered.</h2></div>
+          <div className="faq-intro"><h2>Questions,<br />answered.</h2></div>
           <div className="faq-list">{faqs.map(([question, answer]) => <details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div>
         </section>
 

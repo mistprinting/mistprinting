@@ -15,7 +15,7 @@
 - Custom domain: `https://mistprinting.com`
 - Public path: the custom-domain build is served from `/`; `SITE_BASE_PATH` must remain empty so styles, media, and internal links resolve at the domain root
 - Rendering: every route is build-time server-rendered to complete static HTML; the production site does not require JavaScript for content or navigation
-- Hero treatment: no eyebrow text above page-level H1 headings; section labels remain in content sections
+- Heading treatment: no eyebrow text or small uppercase section labels anywhere on the site; headings stand on their own
 
 ## Routes
 

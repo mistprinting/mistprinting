@@ -27,10 +27,10 @@ export default function ServicesPage() {
     <section className="service-detail-list">
       {services.map((service) => <article className="service-detail" id={service.id} key={service.id}>
         <div className="service-detail-image"><Image src={assetPath(service.image)} alt={service.alt} fill sizes="(max-width: 800px) 100vw, 48vw" /></div>
-        <div className="service-detail-copy"><span className="big-number">{service.number}</span><p className="section-label">{service.title}</p><h2>{service.kicker}</h2><p>{service.text}</p><ul>{service.uses.map((use) => <li key={use}>{use}</li>)}</ul><QuoteLink className="text-link">Ask about this service ↗</QuoteLink></div>
+        <div className="service-detail-copy"><span className="big-number">{service.number}</span><h2>{service.title}</h2><p className="service-kicker">{service.kicker}</p><p>{service.text}</p><ul>{service.uses.map((use) => <li key={use}>{use}</li>)}</ul><QuoteLink className="text-link">Ask about this service ↗</QuoteLink></div>
       </article>)}
     </section>
-    <section className="not-offered"><p className="section-label">Clear expectations</p><h2>Looking for embroidery?</h2><p>Not yet. Mist Printing currently specializes in DTF apparel printing, stickers, and decals—so we can stay focused on doing those exceptionally well.</p></section>
+    <section className="not-offered"><h2>Looking for embroidery?</h2><p>Not yet. Mist Printing currently specializes in DTF apparel printing, stickers, and decals—so we can stay focused on doing those exceptionally well.</p></section>
     <QuoteCta title="Have an order in mind?" />
   </main><SiteFooter /></>;
 }

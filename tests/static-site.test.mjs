@@ -12,6 +12,7 @@ test("exports every public route as static HTML", async () => {
     assert.match(html, /<header class="site-header">/i);
     assert.match(html, /<footer class="site-footer">/i);
     assert.doesNotMatch(html, /class="eyebrow"/i);
+    assert.doesNotMatch(html, /class="section-label"/i);
     assert.doesNotMatch(html, /<script(?![^>]*application\/ld\+json)/i);
     assert.doesNotMatch(html, /@vite|_next\/static/i);
     assert.doesNotMatch(html, /["']\/mistprinting(?:\/|["'])/i);

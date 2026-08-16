@@ -25,7 +25,7 @@ Convert local and national visitors into quote requests while proving print qual
 
 ## Hero contract
 
-- Do not place eyebrow text above the homepage H1.
+- Do not use eyebrow text or small uppercase section labels anywhere on the homepage.
 - Headline: `Custom printing built to show up.`
 - Supporting message must mention DTF apparel, stickers, decals, Treasure Valley service, and nationwide shipping.
 - Primary CTA: `Start your quote`

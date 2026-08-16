@@ -38,7 +38,7 @@ Shared header, footer, metadata, JSON-LD, sitemap, robots, and visual tokens bel
 - Never invent prices, turnaround promises, minimums, testimonials, addresses, hours, or customer identities.
 - Use the supplied logo and real project media. Do not replace them with generic stock printing imagery.
 - Keep pages static-first. Lazy-load below-the-fold images and all video; use responsive media and minimal client JavaScript.
-- Do not use eyebrow text above page-level H1 headings. Section labels remain allowed where they aid scanning.
+- Do not use eyebrow text or small uppercase section labels anywhere on the site. Let each section heading stand on its own, and preserve essential information in normal heading or body text.
 - The production export must contain complete visible content, navigation, metadata, and structured data in HTML. Search engines and visitors must not require JavaScript to read or navigate the site.
 - Use people-first local language. Do not create thin, duplicated city landing pages.
 - Keep visible copy and structured data consistent.
