@@ -10,7 +10,7 @@ export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: "Boise & Treasure Valley DTF Printing Service Area",
-  description: "Mist Printing serves Boise, Meridian, Nampa, Caldwell, and Ontario locally and ships custom apparel, stickers, and decals nationwide.",
+  description: "Mist Printing serves Ontario, Caldwell, Nampa, Meridian , and Boise locally and ships custom apparel, stickers, and decals nationwide.",
   alternates: { canonical: canonicalUrl("/service-area") },
 };
 
