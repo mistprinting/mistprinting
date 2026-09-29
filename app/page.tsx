@@ -142,7 +142,7 @@ export default function Home() {
 
         <section className="service-area-teaser">
           <div><h2>Treasure Valley roots.<br /><span>Nationwide reach.</span></h2></div>
-          <div><p>Serving Boise, Meridian, Nampa, Caldwell, and Ontario locally—with finished orders shipping across the United States.</p><Link className="text-link" href="/service-area">See our service area <span>↗</span></Link></div>
+          <div><p>Serving Ontario, Caldwell, Nampa, Meridian, and Boise  locally—with finished orders shipping across the United States.</p><Link className="text-link" href="/service-area">See our service area <span>↗</span></Link></div>
         </section>
 
         <section className="section faq-section">
